@@ -1,0 +1,26 @@
+{
+  "name": "testing-javascript-demo",
+  "version": "0.1.0",
+  "description": "Testing in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --logHeapUsage --runInBand"
+  },
+  "keywords": [],
+  "author": "Alver Grisales <viga.23@hotmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Alver23/testing-javascript-la-haus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alver23/testing-javascript-la-haus/issues"
+  },
+  "homepage": "https://github.com/Alver23/testing-javascript-la-haus#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1"
+  }
+}
