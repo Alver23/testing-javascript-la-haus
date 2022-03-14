@@ -72,4 +72,40 @@ describe('Calculator', () => {
         })
     })
 
+    describe('sub method', () => {
+
+        it('should get the result of the substraction of two numbers correctly', () => {
+            // Arrange
+            const calculator = new Calculator();
+            const value1 = 50;
+            const value2 = 30;
+            const expectedValue = 20;
+
+            // Act
+            const result = calculator.sub(value1, value2);
+
+            // Assert
+            expect(result).toBe(expectedValue);
+        })
+
+    })
+
+    describe('mult method', () => {
+
+        it('should get the result of the multiplication of two numbers correctly', () => {
+            // Arrange
+            const calculator = new Calculator();
+            const value1 = 5;
+            const value2 = 3;
+            const expectedValue = 15;
+
+            // Act
+            const result = calculator.mult(value1, value2);
+
+            // Assert
+            expect(result).toBe(expectedValue);
+        })
+
+    })
+
 })
