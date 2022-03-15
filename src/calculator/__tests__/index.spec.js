@@ -72,4 +72,21 @@ describe('Calculator', () => {
         })
     })
 
+    describe('division method', () => {
+
+        it('should get the result of the division of two numbers correctly', () => {
+            // Arrange
+            const calculator = new Calculator();
+            const dividend = 10;
+            const divisor = 20;
+            const expectedValue = 0.5;
+
+            // Act
+            const result = calculator.division(dividend, divisor);
+
+            // Assert
+            expect(result).toBe(expectedValue);
+        })
+    })
+
 })
