@@ -87,6 +87,44 @@ describe('Calculator', () => {
             // Assert
             expect(result).toBe(expectedValue);
         })
+
+        it('should return an error when sending string a divisor parameter', () => {
+            // Arrange
+            const calculator = new Calculator();
+            const dividend = 10;
+            const divisor = "asdt";
+
+            // Assert
+            expect(() => {
+                calculator.division(dividend, divisor);
+            }).toThrow('The parameters received are not a numbers')
+
+        })
+        
+        it('should return an error when sending a string dividend parameter', () => {
+            // Arrange
+            const calculator = new Calculator();
+            const dividend = "sgr";
+            const divisor = 10;
+
+            // Assert
+            expect(() => {
+                calculator.division(dividend, divisor);
+            }).toThrow('The parameters received are not a numbers')
+
+        })/* 
+        it('should return an error when sending a string parameter', () => {
+            // Arrange
+            const calculator = new Calculator();
+            const dividend = "20";
+            const divisor = "10";
+
+            // Assert
+            expect(() => {
+                calculator.division(dividend, divisor);
+            }).not.toThrow('The parameters received are not a numbers')
+
+        }) */
     })
 
 })
