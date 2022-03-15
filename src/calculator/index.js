@@ -8,4 +8,13 @@ export default class Calculator {
             return accumulator + currentValue
         }, 0)
     }
+    division(dividend, divisor) {
+        const dividendProp = parseFloat(dividend);
+        const divisorProp = parseFloat(divisor);
+        const isNotNumber = isNaN(dividendProp) || isNaN(divisorProp)
+        if (isNotNumber) {
+            throw new Error('The parameters received are not a numbers')
+        }
+        return dividend / divisor
+    }
 }
