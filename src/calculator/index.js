@@ -8,4 +8,7 @@ export default class Calculator {
             return accumulator + currentValue
         }, 0)
     }
+    division(dividend, divisor) {
+        return dividend/divisor
+    }
 }
