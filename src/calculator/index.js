@@ -13,10 +13,6 @@ export default class Calculator {
         return numb1 - numb2
     }
 
-    mult(numb1, numb2) {
-        return numb1 * numb2
-    }
-
     sub2(...values) {
         return values.reduce((accumulator, currentValue) => {
             const value = parseInt(currentValue);
@@ -24,8 +20,24 @@ export default class Calculator {
                 throw new Error('The received parameter is not a number')
             }
             return accumulator - currentValue
-        }, values[0])
+        })
     }
+
+    mult(numb1, numb2) {
+        return numb1 * numb2
+    }
+
+    mult2(...values) {
+        return values.reduce((accumulator, currentValue) => {
+            const value = parseInt(currentValue);
+            if (isNaN(value)) {
+                throw new Error('The received parameter is not a number')
+            }
+            return accumulator * currentValue
+        },1)
+    }
+
+    
 
   
 }
